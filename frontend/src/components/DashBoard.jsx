@@ -201,10 +201,7 @@ const Dashboard = () => {
 
   return (
     <Box p={4} bg={bgColor} minHeight="100vh">
-      <ToastContainer />
-      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
-        <VStack align="stretch" spacing={8}>
-          <Box bg={bgColor} p={6} borderRadius="lg" boxShadow="md">
+       <Box bg={bgColor} p={6} borderRadius="lg" boxShadow="md">
             <Flex align="center" justify="space-between" wrap="wrap">
               <HStack spacing={4} mb={{ base: 4, md: 0 }}>
                 <Avatar name={user.username} bg="teal.500" />
@@ -226,10 +223,35 @@ const Dashboard = () => {
               </Wrap>
             </Flex>
           </Box>
+      <ToastContainer />
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={8}>
+        <VStack align="stretch" spacing={8}>
+          {/* <Box bg={bgColor} p={6} borderRadius="lg" boxShadow="md">
+            <Flex align="center" justify="space-between" wrap="wrap">
+              <HStack spacing={4} mb={{ base: 4, md: 0 }}>
+                <Avatar name={user.username} bg="teal.500" />
+                <VStack align="start" spacing={1}>
+                  <Text fontSize="2xl" fontWeight="bold">{user.username}</Text>
+                  <Text color="gray.600">{user.email}</Text>
+                </VStack>
+              </HStack>
+              <Wrap spacing={2} justify="flex-end">
+                <WrapItem>
+                  <Button size="sm" colorScheme="teal" onClick={() => handleSettingClick('profile')}>Update Profile</Button>
+                </WrapItem>
+                <WrapItem>
+                  <Button size="sm" colorScheme="blue" onClick={() => handleSettingClick('password')}>Change Password</Button>
+                </WrapItem>
+                <WrapItem>
+                  <Button size="sm" colorScheme="red" onClick={() => handleSettingClick('delete')}>Delete Account</Button>
+                </WrapItem>
+              </Wrap>
+            </Flex>
+          </Box> */}
 
           <Box bg={bgColor} p={6} borderRadius="lg" boxShadow="md">
-            <Text fontSize="xl" fontWeight="bold" mb={4}>Last 5 Submissions</Text>
-            <Box overflowX="auto">
+            {/* <Text fontSize="xl" fontWeight="bold" mb={4}>Last 5 Submissions</Text> */}
+            {/* <Box overflowX="auto">
               <Table variant="simple" size="sm">
                 <Thead>
                   <Tr>
@@ -255,8 +277,8 @@ const Dashboard = () => {
                   ))}
                 </Tbody>
               </Table>
-            </Box>
-            <Button
+            </Box> */}
+            {/* <Button
       rightIcon={<FaChevronRight />}
       colorScheme="blue"
       variant="link"
@@ -264,9 +286,9 @@ const Dashboard = () => {
       onClick={handleViewAllSubmissions}
     >
       View All Submissions
-    </Button>
+    </Button> */}
           </Box>
-
+{/* 
           <Box bg={bgColor} p={6} borderRadius="lg" boxShadow="md">
             <Text fontSize="xl" fontWeight="bold" mb={4}>Problem Solving Progress</Text>
             <Flex direction={{ base: "column", md: "row" }} justify="space-between" align="center">
@@ -300,10 +322,10 @@ const Dashboard = () => {
                 </HStack>
               </VStack>
             </Flex>
-          </Box>
+          </Box> */}
         </VStack>
 
-        <VStack align="stretch" spacing={8}>
+        {/* <VStack align="stretch" spacing={8}>
           <Box bg={bgColor} p={6} borderRadius="lg" boxShadow="md">
             <Text fontSize="xl" fontWeight="bold" mb={4}>Problem Solving Streak</Text>
             <CalendarHeatmap
@@ -364,7 +386,7 @@ const Dashboard = () => {
               </Table>
             </Box>
           </Box>
-        </VStack>
+        </VStack> */}
       </SimpleGrid>
 
       <Modal isOpen={isSettingsOpen} onClose={onSettingsClose} size="md">

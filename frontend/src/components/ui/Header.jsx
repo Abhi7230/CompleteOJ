@@ -29,6 +29,7 @@ import {
   useColorMode,
   Switch,
 } from '@chakra-ui/react';
+
 import { SearchIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import debounce from 'lodash/debounce';
 import Cookies from 'js-cookie';
@@ -72,7 +73,7 @@ const Header = () => {
   const [user, setUser] = useState({ coins: '' });
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const authToken = Cookies.get('authToken'); 
+  const authToken = Cookies.get('authToken');
 
   async function getUserDetails() {
     try {
@@ -84,12 +85,12 @@ const Header = () => {
         },
         credentials: 'include'
       });
-  
+
       if (!response.ok) {
         const errorText = await response.text();
         throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
       }
-  
+
       const userDetails = await response.json();
       setUser({
         coins: userDetails.coins,
@@ -100,7 +101,7 @@ const Header = () => {
       // toast.error(`Failed to fetch user details: ${error.message}`);
     }
   }
-  
+
   useEffect(() => {
     if (authToken) {
       getUserDetails();
@@ -112,12 +113,18 @@ const Header = () => {
   const textColor = useColorModeValue('gray.800', 'white');
 
   const NavItems = () => (
-    <>
-      <Button as={RouterLink} to="/user/dashboard" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}>Dashboard</Button>
-      <Button as={RouterLink} to="/user/referral" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}></Button>
-      <Button as={RouterLink} to="/user/problems" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}>Assignments</Button>
-      <Button as={RouterLink} to="/contests" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}></Button>
-    </>
+    <Flex flex={1} justifyContent="space-between">
+      <Button as={RouterLink} to="/user/dashboard" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}>Your Profile</Button>
+      <HStack spacing={4} flex={1} justify="center">
+        <Button  as={RouterLink} to="/user/problems" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}>Assignments</Button>
+      </HStack>
+      <HStack spacing={4} flex={1} justify="center">
+        <Button  as={RouterLink} to="/admin/addproblem" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}>Add Problems</Button>
+      </HStack>
+      <HStack spacing={4} flex={1} justify="center">
+        <Button  as={RouterLink} to="/user/editor" variant="ghost" _hover={{ bg: useColorModeValue('blue.50', 'blue.900') }} color={textColor}>Compiler</Button>
+      </HStack>
+    </Flex>
   );
 
   const debouncedSearch = useCallback(
@@ -212,18 +219,18 @@ const Header = () => {
             {/* <CoinIcon color={useColorModeValue('yellow.500', 'yellow.200')} mr={2} /> */}
             {/* <Text fontWeight="bold" color={textColor}>{user.coins} </Text> */}
           </Flex>
-          <Button colorScheme="red">
+          {/* <Button colorScheme="red">
             Logout
-          </Button>
+          </Button> */}
           <Flex align="center">
-            <SunIcon color={textColor} />
+            {/* <SunIcon color={textColor} /> */}
             <Switch
               ml={2}
               mr={2}
               isChecked={colorMode === 'dark'}
               onChange={toggleColorMode}
             />
-            <MoonIcon color={textColor} />
+            {/* <MoonIcon color={textColor} /> */}
           </Flex>
         </HStack>
 

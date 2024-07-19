@@ -148,7 +148,7 @@ const AllProblems = () => {
       <Flex mb={6} flexWrap="wrap" gap={4}>
         <Select
           name="topic"
-          placeholder="Filter by Topic"
+          placeholder="Topics"
           onChange={handleFilterChange}
           value={filters.topic}
           w={{ base: '100%', md: 'auto' }}
@@ -159,7 +159,7 @@ const AllProblems = () => {
         </Select>
         <Select
           name="difficulty"
-          placeholder="Filter by Difficulty"
+          placeholder="Difficulty"
           onChange={handleFilterChange}
           value={filters.difficulty}
           w={{ base: '100%', md: 'auto' }}

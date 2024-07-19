@@ -303,20 +303,20 @@ const Signup = () => {
         <Box flex="0.82" position="relative">
         <Image src={signupimage} alt="login Image" objectFit="cover" width="100%" height={{ base: '50vh', md: '100vh' }} />
         <Box position="absolute" top="0" left="0" width="100%" height="100%" bg="rgba(0, 0, 0, 0.5)" color="white" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-          <Text fontSize="3xl" fontWeight="bold">Welcome to AlgoSprint</Text>
-          <Text fontSize="lg" mt={2} textAlign="center">Join us to improve your algorithms and coding skills.</Text>
+          {/* <Text fontSize="3xl" fontWeight="bold">Welcome to AlgoSprint</Text>
+          <Text fontSize="lg" mt={2} textAlign="center">Join us to improve your algorithms and coding skills.</Text> */}
           <Box mt={4} display="flex" flexDirection="column" alignItems="center">
             <Box display="flex" alignItems="center" mt={2}>
-              <Icon as={InfoIcon} w={6} h={6} mr={2} />
-              <Text>Learn from the best</Text>
+              {/* <Icon as={InfoIcon} w={6} h={6} mr={2} /> */}
+              {/* <Text>Learn from the best</Text> */}
             </Box>
             <Box display="flex" alignItems="center" mt={2}>
-              <Icon as={EmailIcon} w={6} h={6} mr={2} />
-              <Text>Get personalized feedback</Text>
+              {/* <Icon as={EmailIcon} w={6} h={6} mr={2} /> */}
+              {/* <Text>Get personalized feedback</Text> */}
             </Box>
             <Box display="flex" alignItems="center" mt={2}>
-              <Icon as={LockIcon} w={6} h={6} mr={2} />
-              <Text>Secure and private</Text>
+              {/* <Icon as={LockIcon} w={6} h={6} mr={2} />
+              <Text>Secure and private</Text> */}
             </Box>
           </Box>
         </Box>
@@ -343,12 +343,12 @@ const Signup = () => {
             bg="rgba(255, 255, 255, 0.8)"
             backdropFilter="blur(10px)"
           >
-            <Flex alignItems="center">
+            {/* <Flex alignItems="center">
               <Image src={algo_logo} alt="Logo" boxSize="50px" borderRadius="full" />
               <Heading size="md" ml={3}>
                 AlgoSprint
               </Heading>
-            </Flex>
+            </Flex> */}
           </Flex>
           <Box
             width="85%"

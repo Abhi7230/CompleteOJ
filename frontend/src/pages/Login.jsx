@@ -137,20 +137,20 @@ const Login = () => {
         <Box flex="0.82" position="relative">
           <Image src={signupimage} alt="Login Image" objectFit="cover" width="100%" height="100%" />
           <Box position="absolute" top="0" left="0" width="100%" height="100%" bg="rgba(0, 0, 0, 0.5)" color="white" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-            <Text fontSize="3xl" fontWeight="bold">Welcome to AlgoSprint</Text>
-            <Text fontSize="lg" mt={2} textAlign="center">Join us to improve your algorithms and coding skills.</Text>
+            {/* <Text fontSize="3xl" fontWeight="bold">Welcome to AlgoSprint</Text> */}
+            {/* <Text fontSize="lg" mt={2} textAlign="center">Join us to improve your algorithms and coding skills.</Text> */}
             <Box mt={4} display="flex" flexDirection="column" alignItems="center">
               <Box display="flex" alignItems="center" mt={2}>
-                <Icon as={InfoIcon} w={6} h={6} mr={2} />
-                <Text>Learn from the best</Text>
+                {/* <Icon as={InfoIcon} w={6} h={6} mr={2} /> */}
+                {/* <Text>Learn from the best</Text> */}
               </Box>
               <Box display="flex" alignItems="center" mt={2}>
-                <Icon as={EmailIcon} w={6} h={6} mr={2} />
-                <Text>Get personalized feedback</Text>
+                {/* <Icon as={EmailIcon} w={6} h={6} mr={2} /> */}
+                {/* <Text>Get personalized feedback</Text> */}
               </Box>
               <Box display="flex" alignItems="center" mt={2}>
-                <Icon as={LockIcon} w={6} h={6} mr={2} />
-                <Text>Secure and private</Text>
+                {/* <Icon as={LockIcon} w={6} h={6} mr={2} /> */}
+                {/* <Text>Secure and private</Text> */}
               </Box>
             </Box>
           </Box>
@@ -176,10 +176,10 @@ const Login = () => {
             bg="rgba(255, 255, 255, 0.8)"
             backdropFilter="blur(10px)"
           >
-            <Flex alignItems="center">
+            {/* <Flex alignItems="center">
               <Image src={sprintlogo} alt="Logo" boxSize="50px" borderRadius="full" />
               <Heading size="md" ml={3}>AlgoSprint</Heading>
-            </Flex>
+            </Flex> */}
           </Flex>
           <Box
             width={{ base: '90%', md: '75%', lg: '60%' }}
@@ -232,7 +232,7 @@ const Login = () => {
                 </Button>
               </Stack>
             </form>
-            <Text mt={4} textAlign="center">New to AlgoSprint?</Text>
+            {/* <Text mt={4} textAlign="center">New to AlgoSprint?</Text> */}
             <Button variant="link" colorScheme="blue" mt={2} display="block" margin="0 auto">
               <Link to='/user/signup'>Sign Up</Link>
             </Button>
