@@ -71,7 +71,7 @@ const Editor = () => {
   const handleRun = async () => {
     try {
       setOutput('Running code...');
-      const response = await axios.post('http://localhost:3000/run', {
+      const response = await axios.post('https://backend.algotech.website/run', {
         language,
         code,
         input: customInput
